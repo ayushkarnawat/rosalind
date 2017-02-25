@@ -4,7 +4,7 @@ Bioinformatics is a emerging field that utilizes the power of programming to und
 These are my solutions to a collection of problems found on [Rosalind](http://rosalind.info/about/). Rosalind is a platform that allows you to learn bioinformatics from a fundamental level, allowing you to reseach theory and then apply that knowledge to solve computational problems in bioinformatics using data structures and algorithms. 
 
 # Motivation
-Let's get to the point: I am really interested in bioinformatics and programming, but I suck at programming and am even worse at bioinformatics. This is a way for me to learn bioinformatics and becomes better at programming.  
+Let's get to the point: I am really interested in bioinformatics and programming, but I suck at programming and am even worse at bioinformatics. This is a way for me to learn bioinformatics and become better at programming.  
 
 # Navigating the Repo
 The files are meant to be standalone scripts, to be used with the in-built Python 3.5.2 library. 
