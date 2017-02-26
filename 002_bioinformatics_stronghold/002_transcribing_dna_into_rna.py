@@ -51,6 +51,6 @@ def convert_dna_to_rna(dna):
 	return ''.join(rna) # combines the list of nucleotides in rna into a string
 
 if __name__ == "__main__":
-	with open("data/002_rosalind_rna.txt", "r") as dna:
+	with open("dataset/002_rosalind_rna.txt", "r") as dna:
 		sequence = dna.read()
 	print(convert_dna_to_rna(sequence))

@@ -34,6 +34,6 @@ def count_nucleotides(dna):
 	return dna.count(DNA.A.value), dna.count(DNA.C.value), dna.count(DNA.G.value), dna.count(DNA.T.value)
 
 if __name__ == "__main__":
-	with open("data/001_rosalind_dna.txt", "r") as dna:
+	with open("dataset/001_rosalind_dna.txt", "r") as dna:
 		sequence = dna.read()
 	print(count_nucleotides(sequence))
