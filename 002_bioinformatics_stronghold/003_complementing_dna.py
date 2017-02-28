@@ -19,20 +19,6 @@ class DNA(Enum):
 	G = "G"
 	T = "T"
 
-def reverse(dna):
-	"""
-	Reverses the given string.
-	
-	params:
-		dna (str): A string of nucleotides constructed from the alphabet {A,C,G,T}
-			i.e. "AAAACCCGGT"
-	
-	returns:
-		reversed_dna (str): The reversed form of the DNA string
-			i.e. "TGGCCCAAAA"
-	"""
-	return dna[::-1]
-
 def reverse_complement(dna):
 	"""
 	Finds the complement of the given DNA strand. 
@@ -46,7 +32,7 @@ def reverse_complement(dna):
 			i.e. "ACCGGGTTTT"
 	"""
 	complement = []
-	for nucleotide in reverse(dna):
+	for nucleotide in dna[::-1]: # loop though the reversed dna string
 		if (nucleotide == DNA.A.value):
 			complement.append(DNA.T.value)
 		elif (nucleotide == DNA.C.value):
