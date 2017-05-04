@@ -23,12 +23,15 @@ def count_nucleotides(dna):
 	"""
 	Counts the total number of each type of nucleotide in the given DNA string.
 
-	params:
-		dna (str): A collection of various nucleotides
-			i.e. "AGCTTTTCATTC"
+	Params:
+	-------
+		dna: (str)
+			A collection of various nucleotides (i.e. "AGCTTTTCATTC")
 	
-	returns:
-		list representing the number of each type of nucleotide in the order (A,C,T,G)
+	Returns:
+	--------
+		count: (list)
+			Representing the number of each type of nucleotide in the order (A,C,T,G)
 			i.e. (2,3,1,6)
 	"""
 	return dna.count(DNA.A.value), dna.count(DNA.C.value), dna.count(DNA.G.value), dna.count(DNA.T.value)
