@@ -42,10 +42,11 @@ def slice_string(s, a, b, c, d):
 
 if __name__ == "__main__":
     # Parse indicies and spilt words
-    with open("dataset/rosalind_ini3.txt", "r") as chars:
+    with open("datasets/rosalind_ini3.txt", "r") as chars:
         string = chars.readline()
         nums = chars.readline()
         a, b, c, d = (int(x) for x in nums.split())
 
-    # Find words
-    print(slice_string(string, a, b, c, d))
+    # Save output
+    with open("output/rosalind_ini3.txt", "w") as out:
+        out.write(slice_string(string, a, b, c, d))

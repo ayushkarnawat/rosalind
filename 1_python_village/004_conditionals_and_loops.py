@@ -1,6 +1,6 @@
 # Python Village, Problem 4: Conditionals and Loops
 # 
-# Given: Two positive integers a and b (a < b< 10000)
+# Given: Two positive integers a and b (a < b < 10000)
 # Return: The sum of all odd integers from a through b, inclusively.
 # 
 # Sample Input: 100 200
@@ -31,8 +31,10 @@ def sum_odd_numbers(a,b):
     return sum_nums
 
 if __name__ == "__main__":
-    with open("dataset/rosalind_ini4.txt", "r") as data:
+    with open("datasets/rosalind_ini4.txt", "r") as data:
         nums = data.readline()
         a, b = (int(x) for x in nums.split())
 
-    print(sum_odd_numbers(a, b))
+    # Save output
+    with open("output/rosalind_ini4.txt", "w") as out:
+        out.write(str(sum_odd_numbers(a, b)))

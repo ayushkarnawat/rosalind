@@ -27,8 +27,10 @@ def get_hypotenuse(a,b):
     return (a ** 2) + (b ** 2)
 
 if __name__ == "__main__":
-    with open("dataset/rosalind_ini2.txt", "r") as data:
+    with open("datasets/rosalind_ini2.txt", "r") as data:
         nums = data.readline()
         a, b = (int(x) for x in nums.split())
 
-    print(get_hypotenuse(a,b))
+    # Save output
+    with open("output/rosalind_ini2.txt", "w") as out:
+        out.write(str(get_hypotenuse(a,b))
