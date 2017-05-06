@@ -13,37 +13,39 @@
 from enum import Enum
 
 class DNA(Enum):
-	"""Represents the various nucleotides that can be within a given DNA string."""
-	A = "A"
-	C = "C"
-	G = "G"
-	T = "T"
+    """Represents the various nucleotides that can be within a given DNA string."""
+    A = "A"
+    C = "C"
+    G = "G"
+    T = "T"
 
 def reverse_complement(dna):
-	"""
-	Finds the complement of the given DNA strand. 
+    """
+    Finds the complement of the given DNA strand. 
 
-	params:
-		dna (str): A string of nucleotides constructed from the alphabet {A,C,G,T}
-			i.e. "AAAACCCGGT"
+    Params:
+    -------
+    dna: (str) 
+        A string of nucleotides constructed from the alphabet {A,C,G,T}
 
-	returns:
-		complement (str): The complement form of the DNA string
-			i.e. "ACCGGGTTTT"
-	"""
-	complement = []
-	for nucleotide in dna[::-1]: # loop though the reversed dna string
-		if (nucleotide == DNA.A.value):
-			complement.append(DNA.T.value)
-		elif (nucleotide == DNA.C.value):
-			complement.append(DNA.G.value)
-		elif (nucleotide == DNA.G.value):
-			complement.append(DNA.C.value)
-		elif (nucleotide == DNA.T.value):
-			complement.append(DNA.A.value)
-	return ''.join(complement) # combines the reversed list of nucleotides into a string
+    Returns:
+    --------
+    complement: (str)
+        The complement form of the DNA string
+    """
+    complement = []
+    for nucleotide in dna[::-1]: # loop though the reversed dna string
+        if (nucleotide == DNA.A.value):
+            complement.append(DNA.T.value)
+        elif (nucleotide == DNA.C.value):
+            complement.append(DNA.G.value)
+        elif (nucleotide == DNA.G.value):
+            complement.append(DNA.C.value)
+        elif (nucleotide == DNA.T.value):
+            complement.append(DNA.A.value)
+    return ''.join(complement) # combines the reversed list of nucleotides into a string
 
 if __name__ == "__main__":
-	with open("dataset/003_rosalind_revc.txt", "r") as dna:
-		sequence = dna.read()
-	print(reverse_complement(sequence))
+    with open("dataset/003_rosalind_revc.txt", "r") as dna:
+        sequence = dna.read()
+    print(reverse_complement(sequence))

@@ -8,27 +8,27 @@
 # Sample Output: 34
 
 def get_hypotenuse(a,b):
-	"""
-	Returns the square of the hypotenuse of the triangle with legs a and b.
+    """
+    Returns the square of the hypotenuse of the triangle with legs a and b.
 
-	Params:
-	-------
-	a:(int) 
-		Length of 1st leg
-		
-	b: (int)
-		Length of 2nd leg
+    Params:
+    -------
+    a:(int) 
+        Length of 1st leg
+        
+    b: (int)
+        Length of 2nd leg
 
-	Returns:
-	--------
-	c: (int)
-		Square of length of 3rd leg (hypotenuse)
-	"""
-	return (a ** 2) + (b ** 2)
+    Returns:
+    --------
+    c: (int)
+        Square of length of 3rd leg (hypotenuse)
+    """
+    return (a ** 2) + (b ** 2)
 
 if __name__ == "__main__":
-	with open("dataset/rosalind_ini2.txt", "r") as data:
-		nums = data.readline()
-		a, b = (int(x) for x in nums.split())
+    with open("dataset/rosalind_ini2.txt", "r") as data:
+        nums = data.readline()
+        a, b = (int(x) for x in nums.split())
 
-	print(get_hypotenuse(a,b))
+    print(get_hypotenuse(a,b))

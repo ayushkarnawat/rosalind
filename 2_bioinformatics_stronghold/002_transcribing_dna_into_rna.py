@@ -10,47 +10,24 @@
 # Sample Input: GATGGAACTTGACTACGTAAATT
 # Sample Output: GAUGGAACUUGACUACGUAAAUU
 
-from enum import Enum
-
-class DNA(Enum):
-	"""Represents the various nucleotides that can be within a given DNA string."""
-	A = "A"
-	C = "C"
-	G = "G"
-	T = "T"
-
-class RNA(Enum):
-	"""Represents the various nucleotides that can be within a given RNA string."""
-	A = "A"
-	C = "C"
-	G = "G"
-	U = "U"
-
 def convert_dna_to_rna(dna):
-	"""
-	Transcribes the given DNA sequence into RNA.
-	
-	params:
-		dna (str): A collection of nucleotides (A,C,G,T)
-			i.e. "GATGGAACTTGACTACGTAAATT"
+    """
+    Transcribes the given DNA sequence into RNA.
+    
+    Params:
+    -------
+    dna: (str)
+        A collection of various nucleotides (A,C,G,T)
 
-	returns:
-		rna (str): A collection of nucleotides (A,C,G,U)
-			i.e. "GAUGGAACUUGACUACGUAAAUU"
-	"""
-	rna = []
-	for nucleotide in dna:
-		if (nucleotide == DNA.A.value):
-			rna.append(RNA.A.value)
-		elif (nucleotide == DNA.C.value):
-			rna.append(RNA.C.value)
-		elif (nucleotide == DNA.G.value):
-			rna.append(RNA.G.value)
-		else:
-			rna.append(RNA.U.value)
-	return ''.join(rna) # combines the list of nucleotides in rna into a string
+    Returns:
+    --------
+    rna: (str)
+        A collection of nucleotides (A,C,G,U)
+    """
+    # Replace all occurences of T with U
+    return dna.replace("T", "U")
 
 if __name__ == "__main__":
-	with open("dataset/002_rosalind_rna.txt", "r") as dna:
-		sequence = dna.read()
-	print(convert_dna_to_rna(sequence))
+    with open("dataset/002_rosalind_rna.txt", "r") as dna:
+        sequence = dna.read()
+    print(convert_dna_to_rna(sequence))
