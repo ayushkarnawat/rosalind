@@ -12,7 +12,7 @@ The files are meant to be standalone scripts, to be used with the in-built Pytho
 The `dataset` folder in each directory contains a sample dataset that I downloaded from the ROSALIND website for each problem. Note: The data changes everytime you attempt to solve the problem so make sure to change the content of the respective file and save before calling the function in your favorte terminal using `python {filename}.py` where `{filename}` is the name of the file you want to run.
 
 # Dependencies
-* Python 3.5.2 -- C'mon you didn't think we would actually do this in Python 2.7?
+* Python 3.5.2: You didn't think we would do this in Python 2.7, did you?
 * Your ability to think
 
 # Other Notes
