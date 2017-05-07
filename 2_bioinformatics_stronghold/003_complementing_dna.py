@@ -46,6 +46,6 @@ def reverse_complement(dna):
     return ''.join(complement) # combines the reversed list of nucleotides into a string
 
 if __name__ == "__main__":
-    with open("dataset/003_rosalind_revc.txt", "r") as dna:
+    with open("datasets/rosalind_revc.txt", "r") as dna:
         sequence = dna.read()
     print(reverse_complement(sequence))

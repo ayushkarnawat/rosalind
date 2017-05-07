@@ -28,6 +28,6 @@ def convert_dna_to_rna(dna):
     return dna.replace("T", "U")
 
 if __name__ == "__main__":
-    with open("dataset/002_rosalind_rna.txt", "r") as dna:
+    with open("datasets/rosalind_rna.txt", "r") as dna:
         sequence = dna.read()
     print(convert_dna_to_rna(sequence))
