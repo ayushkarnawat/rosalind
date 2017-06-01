@@ -48,4 +48,10 @@ def reverse_complement(dna):
 if __name__ == "__main__":
     with open("datasets/rosalind_revc.txt", "r") as dna:
         sequence = dna.read()
+
+    # Find reverse complement
     print(reverse_complement(sequence))
+
+    # Save output
+    with open("output/003_rosalind_revc.txt", "w") as out:
+        out.write(reverse_complement(sequence))

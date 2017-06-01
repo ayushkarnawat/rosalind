@@ -1,12 +1,9 @@
 # Bioinformatics Stronghold, Problem 4: Rabbits and Recurrence Relations
 #
-# In DNA strings, symbols 'A' and 'T' are complements of each other, as are 'C' and 'G'.
-# The reverse complement of a DNA string s is the string sc formed by reversing the symbols
-#   of s, then taking the complement of each symbol (e.g., the reverse complement of "GTCA" is "TGAC").
-#
 # Given: Positive integers n <= 40 and  k <= 5
-# Return: The total number of rabbit pairs that will be present after n months, if we begin with 1 pair and in each generation, every
-#           pair of reproduction-age rabbits produces a litter of k rabbit pairs (instead of only 1 pair)
+# Return: The total number of rabbit pairs that will be present after n months, if we begin with 1 pair and in each 
+#           generation, every pair of reproduction-age rabbits produces a litter of k rabbit pairs (instead of 
+#           only 1 pair)
 #
 # Sample Input: 5 3
 # Sample Output: 19
