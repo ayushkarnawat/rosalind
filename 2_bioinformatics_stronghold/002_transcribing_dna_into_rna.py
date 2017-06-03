@@ -30,4 +30,10 @@ def convert_dna_to_rna(dna):
 if __name__ == "__main__":
     with open("datasets/rosalind_rna.txt", "r") as dna:
         sequence = dna.read()
-    print(convert_dna_to_rna(sequence))
+        
+        # Convert sequence
+        rna = convert_dna_to_rna(sequence)
+
+    # Save output
+    with open("output/002_rosalind_rna.txt", "w") as out:
+        out.write(convert_dna_to_rna(sequence))
