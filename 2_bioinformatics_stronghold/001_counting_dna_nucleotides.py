@@ -41,4 +41,14 @@ def count_nucleotides(dna):
 if __name__ == "__main__":
     with open("datasets/rosalind_dna.txt", "r") as dna:
         sequence = dna.read()
-    print(count_nucleotides(sequence))
+
+    # Compute total number of nucletides each
+    num_a, num_c, num_g, num_t = count_nucleotides(sequence)
+    print(num_a, num_c, num_g, num_t)
+
+    # Save output
+    with open("output/001_rosalind_dna.txt", "w") as out:
+        out.write(str(num_a) + " ")
+        out.write(str(num_c) + " ")
+        out.write(str(num_g) + " ")
+        out.write(str(num_t))
