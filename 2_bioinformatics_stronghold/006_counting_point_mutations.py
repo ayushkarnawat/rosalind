@@ -47,6 +47,3 @@ if __name__ == "__main__":
     # Save result
     with open("output/006_rosalind_hamm.txt", "w") as out:
         out.write(str(edit_distance))
-
-
-
