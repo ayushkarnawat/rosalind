@@ -1,3 +1,21 @@
+# Bioinformatics Stronghold, Problem 7: Mendel's First Law
+# 
+# Given: Three positive integers k, m, and n , representing a population 
+#   containing k+m+n organisms: k individuals are homozygous dominant for a 
+#   factor, m are heterozygous, and n are homozygous recessive.
+# 
+# Return: The probability that two randomly selected mating organisms will 
+#   produce an individual possessing a dominant allele (and thus displaying 
+#   the dominant phenotype). Assume that any two organisms can mate.
+# 
+# Sample Input:
+# -------------
+# 2 2 2 
+# 
+# Sample Output:
+# --------------
+# 0.78333
+
 import math
 
 
@@ -77,5 +95,6 @@ if __name__ == "__main__":
     prob = probability(k, m, n)
     print(prob)
 
+    # Save result
     with open("output/007_rosalnd_iprb.txt", "w") as out:
         out.write(str(prob))
