@@ -26,7 +26,6 @@
 
 from enum import Enum
 from collections import defaultdict
-from itertools import chain
 
 
 class DNA(Enum):
